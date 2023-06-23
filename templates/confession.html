@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{%block content%}
+<video controls style="margin: 250px;">
+    <source src="{{url_for('static', filename='My name is Walter Hartwell White. I live at 308 Negra Arroyo Lane, Albuquerque, New Mexico 87104.mp4')}}" type="video/mp4">
+    <source src="{{url_for('static', filename='My name is Walter Hartwell White. I live at 308 Negra Arroyo Lane, Albuquerque, New Mexico 87104.ogg')}}" type="video/ogg">
+</video>
+{%endblock%}

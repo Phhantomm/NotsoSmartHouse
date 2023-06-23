@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<h1 style="text-align: center; font-weight: bolder; color: blueviolet; margin-top: 60px;"> Finally, Some Peace and Quiet in This Place </h1>
+<div class="row">
+<div class="card" style="margin-top: 80px;">
+    <img src="{{url_for('static', filename='unnamed.jpg')}}" class="card-img-top" alt="come on">
+    <div class="card-body">
+      <h5 class="card-title">Glass without Window</h5>
+      <p class="card-text">Problem of Opening a Window is GONE! Simply by Moving our Glass without Window and BOOM!! The Work is Done!.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top: 80px;">
+    <img src="{{url_for('static', filename='noglass.jpg')}}" class="card-img-top" alt="come on">
+    <div class="card-body">
+      <h5 class="card-title">Window without Glass</h5>
+      <p class="card-text">Youre Always Hot in Your House and in a Constant Need to Open the Window? FEAR NOT With our Product the Window is ALWAYS OPEN!!!.</p>
+    </div>
+  </div>
+  <div class="card"style="margin-top: 80px;">
+    <img src="{{url_for('static', filename='lotline4.png')}}" class="card-img-top" alt="come on">
+    <div class="card-body">
+    <h5 class="card-title">EXTRA!!!!!</h5>
+    <p class="card-text">THIS PRODUCT COMES AS AN EXTRA IF YOU BUY THIS BUNDLE!!</p>
+    
+    </div>
+</div>
+</div>
+<h1 style="text-align: center; color: red; margin-top: 40px;">Well, Well... Looks like You Found one of Two Secret Pages... Since you Found this We Will Send you These Products to you For Free! No Need for The Name and Address We already Have your IP Address!</h1>
+{%endblock%}

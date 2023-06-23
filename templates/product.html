@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {{ super() }}
+    <audio autoplay="" loop="" src="{{url_for('static', filename='Pixies - Where Is My Mind_ (Official Lyric Video).mp3')}}"></audio>
+    <h1 class="ontop" style="color: blueviolet;"> All Products </h1>
+<div class="row">
+    <div class="card" style="margin-top: 50px;">
+        <img src="{{url_for('static', filename='microwave.jpg')}}" class="card-img-top" alt="come on">
+        <div class="card-body">
+          <h5 class="card-title">Microwave Powered by Scream</h5>
+          <p class="card-text">A Revolutionary Microwave Which is Being Powered by Newly Integrated Technology.</p>
+          <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Order</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 50px;">
+        <img src="{{url_for('static', filename='unnamed (2).jpg')}}" class="card-img-top" alt="come on">
+        <div class="card-body">
+          <h5 class="card-title">Fridge which Lights Turn off When You Open it</h5>
+          <p class="card-text">Newly Introduced Fridge Which Automatically Turns off Lights When You Open it.</p>
+          <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Order</a>
+        </div>
+      </div>
+    
+      <div class="card" style="margin-top: 50px;">
+        <img src="{{url_for('static', filename='unnamed (1).jpg')}}" class="card-img-top" alt="come on">
+        <div class="card-body">
+          <h5 class="card-title">Kettle Which Works in Quiet</h5>
+          <p class="card-text">Technology Introduced in This Product Coexists with Microwave and Creates Beloved 'Not So Smart House'.</p>
+          <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Order</a>
+        </div>
+      </div>
+</div class="row"> 
+<div class="row">
+    <div class="card" style="margin-top: 130px;">
+        <img src="{{url_for('static', filename='unnamed.jpg')}}" class="card-img-top" alt="come on">
+        <div class="card-body">
+          <h5 class="card-title">Glass without Window</h5>
+          <p class="card-text">Problem of Opening a Window is GONE! Simply by Moving our Glass without Window and BOOM!! The Work is Done!.</p>
+          <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Order</a>
+        </div>
+      </div>
+      <div class="card" style="margin-top: 130px;">
+        <img src="{{url_for('static', filename='noglass.jpg')}}" class="card-img-top" alt="come on">
+        <div class="card-body">
+          <h5 class="card-title">Window without Glass</h5>
+          <p class="card-text">Youre Always Hot in Your House and in a Constant Need to Open the Window? FEAR NOT With our Product the Window is ALWAYS OPEN!!!.</p>
+          <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Order</a>
+        </div>
+      </div>
+      <div class="card" style="margin-top: 130px;">
+        <img src="{{url_for('static', filename='hair.jpg')}}" class="card-img-top" alt="come on">
+        <div class="card-body">
+          <h5 class="card-title">Hair Dryer which Turns on When its off</h5>
+          <p class="card-text">With our Newly Invented Power Technology You Can Have This Hair Dryer Turned on When its off! It Will Consume Power When its Plugged in to Turn off!.</p>
+          <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Order</a>
+        </div>
+      </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Order Dialog</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="{{ url_for('product') }}">
+          <input type="text" name="name" placeholder="სახელი">
+          <input type="text" name="surname" placeholder="გვარი">
+          <input type="tel" name="telephone" placeholder="ნომერი">
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          <label for="vehicle1">გოჩა (გამოძახება)</label>
+          
+          <div class="modal-footer">
+            <button type="button" class="button1 btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="button btn-primary" action="{{url_for('delivery')}}">Confirm Order</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+{% endblock %}

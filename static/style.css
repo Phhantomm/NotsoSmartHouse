@@ -1,0 +1,110 @@
+body {
+    background-color: black;
+}
+.error {
+    font-weight: bold;
+    color: mediumvioletred;
+}
+
+.info {
+    font-weight: bold;
+    color: darkgreen;
+}
+.navbar-brand{
+    color: white;
+    margin-left: 20px;
+}
+.navbar{
+    background-color: black;
+}
+.navbar-toggler{
+    color: white;
+}
+
+/* .nav-link {
+    background-color: black;
+} */
+
+.offcanvas-body{
+    font-weight: bolder;
+}
+
+.card{
+    margin-left: 270px;
+    background-color: rebeccapurple;
+    width: 18rem;
+}
+.btn{
+    background-color: red;
+}
+.card-text{
+    color:white;
+}
+
+.accordion-item{
+    background-color: black;
+}
+.accordion-button{
+    background-color: blueviolet;
+}
+
+.btn-secondary{
+    margin-top: 20px;
+}
+
+.idk{
+    text-align: center;
+}
+.moving{
+    margin-top: 250px;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.ontop{
+    font-weight: bolder;
+    text-align: center;
+    
+}
+.button
+{
+  padding: 10px 15px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: #0ca5bc;
+  border-radius: 20px;
+  box-shadow: 0 10px #999;
+}
+
+.button:hover {background-color: #007095}
+
+.button:active {
+  background-color: #007095;
+  box-shadow: 0 5px rgb(25, 25, 25);
+  transform: translateY(5px);
+}
+
+.button1
+{
+  padding: 10px 15px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: #FF0000;
+  border-radius: 20px;
+  box-shadow: 0 10px #999;
+}
+
+.button1:hover {background-color: #007095}
+
+.button1:active {
+  background-color: #007095;
+  box-shadow: 0 5px rgb(25, 25, 25);
+  transform: translateY(5px);
+}
+.isarqaviatqveniip{
+    color: white
+}

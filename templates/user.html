@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{super()}}
+    <audio autoplay="" loop="" src="{{url_for('static', filename='Elevator Music - So Chill.mp3')}}"></audio>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Bundle #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div class="row">
+                <div class="card" style="margin-top: 40px;">
+                    <img src="{{url_for('static', filename='unnamed.jpg')}}" class="card-img-top" alt="come on">
+                    <div class="card-body">
+                    <h5 class="card-title">Glass without Window</h5>
+                    <p class="card-text">Problem of Opening a Window is GONE! Simply by Moving our Glass without Window and BOOM!! The Work is Done!.</p>
+                    
+                    </div>
+                </div>
+                <div class="card"style="margin-top: 40px;">
+                    <img src="{{url_for('static', filename='noglass.jpg')}}" class="card-img-top" alt="come on">
+                    <div class="card-body">
+                    <h5 class="card-title">Window without Glass</h5>
+                    <p class="card-text">Youre Always Hot in Your House and in Constant Need to Open the Window? FEAR NOT With our Product the Window is ALWAYS OPEN!!!.</p>
+                    
+                    </div>
+                </div>
+                <div class="card"style="margin-top: 40px;">
+                    <img src="{{url_for('static', filename='lotline4.png')}}" class="card-img-top" alt="come on">
+                    <div class="card-body">
+                    <h5 class="card-title">EXTRA!!!!!</h5>
+                    <p class="card-text">THIS PRODUCT COMES AS AN EXTRA IF YOU BUY THIS BUNDLE!!</p>
+                    
+                    </div>
+            </div>
+        </div>
+        <a class="btn btn-primary" style="margin-left: 850px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Order This Bundle Now!</a>
+      </div>
+    </div>
+    <div class="accordion-item" style="margin-top:30px ;">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Bundle #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div class="row">
+                <div class="card" style="margin-top: 50px;">
+                    <img src="{{url_for('static', filename='microwave.jpg')}}" class="card-img-top" alt="come on">
+                    <div class="card-body">
+                      <h5 class="card-title">Microwave Powered by Scream</h5>
+                      <p class="card-text">A Revolutionary Microwave Which is Being Powered by Newly Integrated Technology.</p>
+                    </div>
+                  </div>
+            
+                  <div class="card" style="margin-top: 50px;">
+                    <img src="{{url_for('static', filename='unnamed (2).jpg')}}" class="card-img-top" alt="come on">
+                    <div class="card-body">
+                      <h5 class="card-title">Fridge which Light Turn off When You Open it</h5>
+                      <p class="card-text">Newly Introduced Fridge Which Automatically Turns off Lights When You Open it.</p>
+                    </div>
+                  </div>
+                
+                  <div class="card" style="margin-top: 50px;">
+                    <img src="{{url_for('static', filename='unnamed (1).jpg')}}" class="card-img-top" alt="come on">
+                    <div class="card-body">
+                      <h5 class="card-title">Kettle Which Works in Quiet</h5>
+                      <p class="card-text">Technology Introduced in This Product Coexists with Microwave and Creates Beloved 'Autistic House'.</p>
+                    </div>
+                  </div>
+            </div class="row"> 
+            <a class="btn btn-primary" style="margin-left: 850px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Order This Bundle Now!</a>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item" style="margin-top:30px ;">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Coming soon
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong style="color: red;">Rest of The Bundles are Coming soon With Newer Products!</strong>
+<!--        <div id="countdown">-->
+<!--          Time remaining: {{ days }}d {{ hours }}h {{ minutes }}m {{ seconds }}s-->
+<!--        </div>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="{{ url_for('product') }}">
+            <input type="text" name="name" placeholder="სახელი">
+            <input type="text" name="surname" placeholder="გვარი">
+            <input type="tel" name="telephone" placeholder="ნომერი">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1">გოჩა (გამოძახება)</label>
+            
+            <div class="modal-footer">
+              <button type="button" class="button1 btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="button btn-primary" action="{{url_for('delivery')}}">Confirm Order</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+{% endblock %}
+
+

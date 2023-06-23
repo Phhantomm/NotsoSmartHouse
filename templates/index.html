@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <h1 class="idk" style="color: blueviolet;"> Welcome to Our Website Called Not So Smart House, Complete Opposite to SmartHouse, With Many Benefits and Fascinating Products to Go Through!</h1>
+    <img src="{{url_for('static', filename='image.jpg')}}" style="margin-left:350px ;">
+
+
+    <marquee class="moving" scrollamount="30" behavior="alternate" direction="right" style="color: red;">check out our bundles and dont forget to always drink and drive!</marquee>
+    <audio autoplay="" loop="" src="{{url_for('static', filename='Undertale - Megalovania.mp3')}}"></audio>
+
+{% endblock %}
